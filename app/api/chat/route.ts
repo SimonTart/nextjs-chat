@@ -27,7 +27,6 @@ export async function POST(req: Request) {
   if (previewToken) {
     configuration.apiKey = previewToken
   }
-
   const res = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     messages,
